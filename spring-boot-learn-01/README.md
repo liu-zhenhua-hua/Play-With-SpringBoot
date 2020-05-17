@@ -20,10 +20,3 @@ First Project of Spring Boot.
         <relativePath>../../spring-boot-dependencies</relativePath>
       </parent>
 
-
-### Import Dependency
-```xml
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
