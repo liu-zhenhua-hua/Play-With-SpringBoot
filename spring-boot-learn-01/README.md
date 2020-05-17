@@ -28,3 +28,5 @@ First Project of Spring Boot.
          <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
 ```
+
+Spring Boot provides lots of 'Starter', developer can import the starter which they want.
