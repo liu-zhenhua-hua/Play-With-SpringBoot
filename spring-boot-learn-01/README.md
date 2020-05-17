@@ -22,8 +22,3 @@ First Project of Spring Boot.
 ```
 
 ### Import Dependency
-```xml
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
