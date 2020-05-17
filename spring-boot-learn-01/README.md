@@ -19,3 +19,11 @@ First Project of Spring Boot.
         <version>2.2.6.RELEASE</version>
         <relativePath>../../spring-boot-dependencies</relativePath>
       </parent>
+
+
+### Import Dependency
+```xml
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
