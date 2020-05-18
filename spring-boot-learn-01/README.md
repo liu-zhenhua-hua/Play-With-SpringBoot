@@ -62,3 +62,5 @@ public @interface SpringBootApplication {
 **@Configuration**: 这个是Spring的基础注解, 配置类 --- 配置文件, 实际上这个配置类也是一个容器中的一个组件 **@Component**
 
 
+
+**@EnableAutoConfiguration**: 开启自动配置功能;
