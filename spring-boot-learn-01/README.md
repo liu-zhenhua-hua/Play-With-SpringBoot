@@ -59,4 +59,6 @@ public @interface SpringBootApplication {
 ```
 
 **@SpringBootConfiguration** SpringBoot的配置类,标注在某个类上, 表示是一个Spring Boot的配置类; 该注解上还有一个注解
-**@Configuration**: 这个是Spring的基础注解, 配置类 --- 配置文件, 实际上这个配置类也是一个容器中的一个组件
+**@Configuration**: 这个是Spring的基础注解, 配置类 --- 配置文件, 实际上这个配置类也是一个容器中的一个组件 **@Component**
+
+
