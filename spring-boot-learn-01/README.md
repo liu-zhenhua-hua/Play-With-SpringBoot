@@ -30,3 +30,13 @@ First Project of Spring Boot.
 ```
 
 Spring Boot provides lots of 'Starter', developer can import the starter which they want.
+
+### Main class, Entry's Class
+```java
+@SpringBootApplication
+public class HelloCherryApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(HelloCherryApplication.class,args);
+    }
+}
+```
