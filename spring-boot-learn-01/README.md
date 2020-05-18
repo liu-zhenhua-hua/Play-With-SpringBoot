@@ -40,3 +40,6 @@ public class HelloCherryApplication {
     }
 }
 ```
+
+**@SpringBootAppliction**: SpringBootApplication注解,标注在某个类上说明这个类是SpringBoot的主配置类,SpringBoot就应该
+运行这个类的main方法来启动SpringBoot应用
