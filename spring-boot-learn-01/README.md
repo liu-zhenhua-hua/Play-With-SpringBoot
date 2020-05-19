@@ -64,3 +64,11 @@ public @interface SpringBootApplication {
 
 
 **@EnableAutoConfiguration**: 开启自动配置功能;只有这样自动配置才能生效;
+
+```java
+@AutoConfigurationPackage
+@Import(AutoConfigurationImportSelector.class)
+public @interface EnableAutoConfiguration {
+    ...
+}
+```
