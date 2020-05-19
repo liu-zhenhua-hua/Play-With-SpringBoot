@@ -72,3 +72,5 @@ public @interface EnableAutoConfiguration {
     ...
 }
 ```
+
+**@AutoConfigurationPackage** 自动配置包
