@@ -63,4 +63,4 @@ public @interface SpringBootApplication {
 
 
 
-**@EnableAutoConfiguration**: 开启自动配置功能;
+**@EnableAutoConfiguration**: 开启自动配置功能;只有这样自动配置才能生效;
