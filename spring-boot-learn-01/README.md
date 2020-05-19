@@ -78,3 +78,9 @@ Spring的底层注解**@Import**, 给容器导入一个组件; 导入的组件�
 ```java
 它的作用就是将主配置类(@SpringBootApplication标注的类)的所在包及下面所有子包里面所有组件扫描到Spring容器中
 ```
+
+
+<br/>
+<br/>
+**@EnableAutoConfiguration**: 中还有另外一个注解:
+@Import(AutoConfigurationImportSelector.class)
