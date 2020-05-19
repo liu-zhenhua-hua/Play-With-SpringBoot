@@ -73,4 +73,5 @@ public @interface EnableAutoConfiguration {
 }
 ```
 
-**@AutoConfigurationPackage** 自动配置包
+**@AutoConfigurationPackage** 自动配置包, 这个自动配置包中含有一条重要的语句 @Import(AutoConfigurationPackages.Registrar.class)
+
