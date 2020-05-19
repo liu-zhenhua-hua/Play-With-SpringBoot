@@ -83,4 +83,4 @@ Spring的底层注解**@Import**, 给容器导入一个组件; 导入的组件�
 <br/>
 <br/>
 **@EnableAutoConfiguration**: 中还有另外一个注解:
-@Import(AutoConfigurationImportSelector.class)
+@Import(AutoConfigurationImportSelector.class), AutoConfigurationImportSelector: 我可以把它理解为导入组件选择器
