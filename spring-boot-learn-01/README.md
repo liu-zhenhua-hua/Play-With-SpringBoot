@@ -88,4 +88,4 @@ Spring的底层注解**@Import**, 给容器导入一个组件; 导入的组件�
 就是给容器中导入这个场景需要的所有组件,并配置好这些组件;
 
 具体导入哪些组件,请参看如下截图
-![image](https://github.com/liu-zhenhua-hua/Play-With-SpringBoot/blob/master/spring-boot-learn-01/images/components.png)
+![image](https://github.com/liu-zhenhua-hua/Play-With-SpringBoot/master/spring-boot-learn-01/images/components.png)
