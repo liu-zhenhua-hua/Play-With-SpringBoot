@@ -91,4 +91,4 @@ Spring的底层注解**@Import**, 给容器导入一个组件; 导入的组件�
 ![导入的组件](https://github.com/liu-zhenhua-hua/Play-With-SpringBoot/blob/master/spring-boot-learn-01/images/components.png)
 
 <br/>
-有了自动配置类,免了我们手动编写配置注入功能组件等的工资
+有了自动配置类,免了我们手动编写配置注入功能组件等的工作
