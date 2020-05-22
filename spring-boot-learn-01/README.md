@@ -93,4 +93,8 @@ Spring的底层注解**@Import**, 给容器导入一个组件; 导入的组件�
 <br/>
 有了自动配置类,免了我们手动编写配置注入功能组件等的工作<br/>
 **SpringFactoriesLoader.loadFactoryNames(EnableAutoConfiguration.class,classLoader);**: 从类路径下的"META-INF/spring.factories"中
-获取EnableAutoConfiguration指定的值
+获取EnableAutoConfiguration指定的值.
+
+<br/>
+总结一下: Spring Boot在启动时从类路径下的"META-INF/spring.factories" 中获取EnableAutoConfiguration指定的值, 将这些值作为自动配置类
+导入到容器中, 自动配置类就生效了, 帮我们进行自动配置工作
