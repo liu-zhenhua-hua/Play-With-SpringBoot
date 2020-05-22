@@ -92,4 +92,5 @@ Spring的底层注解**@Import**, 给容器导入一个组件; 导入的组件�
 
 <br/>
 有了自动配置类,免了我们手动编写配置注入功能组件等的工作<br/>
-**SpringFactoriesLoader.loadFactoryNames(EnableAutoConfiguration.class,classLoader);**: 从类路径下的"META-INF/spring.factories"
+**SpringFactoriesLoader.loadFactoryNames(EnableAutoConfiguration.class,classLoader);**: 从类路径下的"META-INF/spring.factories"中
+获取EnableAutoConfiguration指定的值
