@@ -107,4 +107,5 @@ J2EE的整体整合解决方案和自动配置都在 **spring-boot-autoconfigure
 ### Spring Boot Initializer
 Spring Boot 为开发者提供一个快速开发向导(https://start.spring.io/) 使用这种方式构建Spring Boot应用程序,Initializer 会为开发者自动
 创建程序的主类, 开发者所需要做的就是编写自己的controller即可. 生成的项目中包含一个文件夹**resources** 它的目录结构包括**static** **templates**
-以及**application.properties**这个是Spring Boot的配置文件, **static** 文件夹中保存静态资源(js,css,images)
+以及**application.properties**这个是Spring Boot的配置文件, **static** 文件夹中保存静态资源(js,css,images) **templates** 文件夹中包含
+页面模版文件 Spring Boot默认jar包使用嵌入式Tomcat, 默认不支持JSP页面,可以使用模版引擎(freemarker,thymeleaf)
