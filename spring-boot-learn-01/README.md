@@ -106,3 +106,5 @@ J2EE的整体整合解决方案和自动配置都在 **spring-boot-autoconfigure
 
 
 <br/>
+
+###Spring Boot Initializer
