@@ -74,7 +74,7 @@ public @interface EnableAutoConfiguration {
 ```
 
 **@AutoConfigurationPackage** 自动配置包, 这个自动配置包中含有一条重要的语句 @Import(AutoConfigurationPackages.Registrar.class)
-Spring的底层注解**@Import**, 给容器导入一个组件; 导入的组件由**AutoConfigurationPackages.Registrar.class**
+Spring的底层注解**@Import** 给容器导入一个组件; 导入的组件由**AutoConfigurationPackages.Registrar.class**
 ```java
 它的作用就是将主配置类(@SpringBootApplication标注的类)的所在包及下面所有子包里面所有组件扫描到Spring容器中
 ```
