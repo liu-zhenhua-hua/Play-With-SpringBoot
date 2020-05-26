@@ -82,7 +82,7 @@ Spring的底层注解**@Import**, 给容器导入一个组件; 导入的组件�
 
 <br/>
 <br/>
-**@EnableAutoConfiguration**: 中还有另外一个注解:
+**@EnableAutoConfiguration** : 中还有另外一个注解:
 @Import(AutoConfigurationImportSelector.class), AutoConfigurationImportSelector: 我可以把它理解为导入组件选择器,
 它将所有需要导入的组件以全类名的方式返回,这些组件就会被添加到容器中; 其实就是为容器导入很多的自动配置类(xxxAutoConfiguration)
 就是给容器中导入这个场景需要的所有组件,并配置好这些组件;
@@ -106,3 +106,4 @@ J2EE的整体整合解决方案和自动配置都在 **spring-boot-autoconfigure
 
 
 ### Spring Boot Initializer
+Spring Boot 为开发者提供一个快速开发向导(https://start.spring.io/);
