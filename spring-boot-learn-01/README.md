@@ -105,4 +105,4 @@ J2EE的整体整合解决方案和自动配置都在 **spring-boot-autoconfigure
 
 
 ### Spring Boot Initializer
-Spring Boot 为开发者提供一个快速开发向导(https://start.spring.io/);使用这种方式构建Spring Boot应用程序
+Spring Boot 为开发者提供一个快速开发向导(https://start.spring.io/) 使用这种方式构建Spring Boot应用程序
