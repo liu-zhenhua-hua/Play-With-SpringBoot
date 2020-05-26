@@ -87,24 +87,22 @@ Spring的底层注解**@Import**, 给容器导入一个组件; 导入的组件�
 它将所有需要导入的组件以全类名的方式返回,这些组件就会被添加到容器中; 其实就是为容器导入很多的自动配置类(xxxAutoConfiguration)
 就是给容器中导入这个场景需要的所有组件,并配置好这些组件;
 
-具体导入哪些组件,请参看如下截图<br/>
+具体导入哪些组件,请参看如下截图
 ![导入的组件](https://github.com/liu-zhenhua-hua/Play-With-SpringBoot/blob/master/spring-boot-learn-01/images/components.png)
 
-<br/>
+
 有了自动配置类,免了我们手动编写配置注入功能组件等的工作<br/>
 **SpringFactoriesLoader.loadFactoryNames(EnableAutoConfiguration.class,classLoader);**: 从类路径下的"META-INF/spring.factories"中
 获取EnableAutoConfiguration指定的值.
 
-<br/>
+
 总结一下: Spring Boot在启动时从类路径下的"META-INF/spring.factories" 中获取EnableAutoConfiguration指定的值, 将这些值作为自动配置类
 导入到容器中, 自动配置类就生效了, 帮我们进行自动配置工作. 以前是我们自己需要手动配置的东西, 现在自动配置类帮我们完成了这部分工作.
 
 
-<br/>
-<br/>
+
 J2EE的整体整合解决方案和自动配置都在 **spring-boot-autoconfigure-2.2.6.RELEASE.jar** 文件中
 
 
-<br/>
 
 ###Spring Boot Initializer
