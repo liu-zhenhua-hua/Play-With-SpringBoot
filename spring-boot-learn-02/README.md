@@ -75,4 +75,8 @@ pets:
     - pig
 
 ```
+数字的行内写法:
+```yaml
+pets: [cat,dog,pig]
 
+```
