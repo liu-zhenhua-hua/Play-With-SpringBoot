@@ -1,3 +1,5 @@
+# spring-boot-learn-02
+
 ### Spring Boot Project yaml配置学习笔记
 
 Spring Boot 所使用的全局配置文件
@@ -11,7 +13,7 @@ application.yml
 application.properties 这个文件是常见, 常用的
 
 
-### YAML (YAML Ain't Markup Language)
+### 1.YAML (YAML Ain't Markup Language)
 
 以前的配置文件: 大多数使用的是: **xxxxx.xml文件**
 
@@ -28,4 +30,13 @@ XML: 配置的例子
     <server>
         <port>8081</port>
     </server>
+```
+
+### 2. YAML 基本语法
+K: V 表示一对键值对(K与V 之间要有空格)
+空格的缩进来控制层级关系; 只要是左对齐的一列数据,都是同一个层级的, 举个例子
+```yaml
+server:
+    port: 8088
+    path: /hello
 ```
