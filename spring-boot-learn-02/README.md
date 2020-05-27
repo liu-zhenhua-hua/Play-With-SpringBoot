@@ -58,12 +58,12 @@ server:
 ```
 
     对象的行内写法:
-    ```yaml
+```yaml
 
         person: {lastName: James,age: 30}
 
-    ```
+```
 
 
-数组(List, Set)
+**数组(List, Set)**
 
