@@ -126,3 +126,16 @@ public class Person {
     private Dog dog;
 
 ```
+
+**导入配置文件处理器**
+```xml
+<!-- @ConfigurationProperties, 配置文件解析器 -->
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-configuration-processor</artifactId>
+	<optional>true</optional>
+</dependency>
+
+
+
+```
