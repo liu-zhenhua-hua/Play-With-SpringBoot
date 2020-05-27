@@ -136,6 +136,6 @@ public class Person {
 	<optional>true</optional>
 </dependency>
 
-
+这个是根据官方文档的说明, 在pom.xml文件中添加这个依赖,这样@ConfigurationProperties 才起作用
 
 ```
