@@ -83,7 +83,7 @@ pets: [cat,dog,pig]
 
 ### 4. YAML 配置文件的具体例子
 
-**配置文件**
+**配置文件的内容**
 ```yaml
 person:
     lastName: James
@@ -98,5 +98,31 @@ person:
     dog:
       name: Koggle
       age: 2
+
+```
+**Java Bean的内容**
+```java
+/*
+    @ConfigurationProperties 会告诉Spring Person类中的属性都是配置文件中的属性
+    prefix = "person" 指的是配置文件中person下的所有属性进行一一映射
+
+    另外这个组件只用是容器中的组件, 才能提供功能
+ */
+@Component
+@ConfigurationProperties(prefix = "person")
+public class Person {
+
+    private String lastName;
+    private Integer age;
+
+    private Boolean boss;
+    private Date birth;
+
+
+    private Map<String,Object> maps;
+
+    private List<Object> lists;
+
+    private Dog dog;
 
 ```
