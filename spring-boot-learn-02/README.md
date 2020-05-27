@@ -13,3 +13,19 @@ application.properties 这个文件是常见, 常用的
 
 ### YAML (YAML Ain't Markup Language)
 
+以前的配置文件: 大多数使用的是: **xxxxx.xml文件**
+
+YAML: 以数据为中心, 比JSON, xml等更适合做配置文件;
+
+YAML: 配置的例子
+```yaml
+server:
+    port: 8081
+```
+
+XML: 配置的例子
+```xml
+    <server>
+        <port>8081</port>
+    </server>
+```
