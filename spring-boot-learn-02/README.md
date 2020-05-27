@@ -60,10 +60,19 @@ server:
     对象的行内写法:
 ```yaml
 
-        person: {lastName: James,age: 30}
+  person: {lastName: James,age: 30}
 
 ```
 
 
 **数组(List, Set)**
+用- 值, 表示数组中的一个值
+```yaml
+
+pets:
+    - cat
+    - dog
+    - pig
+
+```
 
