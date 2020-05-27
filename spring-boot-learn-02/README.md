@@ -50,13 +50,12 @@ server:
 对象,Map (属性和值, 对应的语法就是K: V, 键值对)
 
     对象还是键值对的方式: K: V, 例子如下
-    ```yaml
+```yaml
 
         person:
             lastName: James
             age: 30
-
-    ```
+```
 
     对象的行内写法:
     ```yaml
