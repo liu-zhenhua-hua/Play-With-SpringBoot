@@ -1,2 +1,17 @@
 server:
   port: 8088
+
+
+person:
+    lastName: James
+    age: 30
+    boss: false
+    birth: 2017/12/13
+    maps: {K1: V1,K2: V2}
+    lists:
+      - Mark
+      - Dennis
+      - Spring
+    dog:
+      name: Koggle
+      age: 2

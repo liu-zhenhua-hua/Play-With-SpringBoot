@@ -80,3 +80,23 @@ pets:
 pets: [cat,dog,pig]
 
 ```
+
+### 4. YAML 配置文件的具体例子
+
+**配置文件**
+```yaml
+person:
+    lastName: James
+    age: 30
+    boss: false
+    birth: 2017/12/13
+    maps: {K1: V1,K2: V2}
+    lists:
+      - Mark
+      - Dennis
+      - Spring
+    dog:
+      name: Koggle
+      age: 2
+
+```
