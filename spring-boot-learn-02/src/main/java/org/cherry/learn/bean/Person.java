@@ -2,6 +2,7 @@ package org.cherry.learn.bean;
 
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.annotation.Validated;
 
@@ -21,7 +22,13 @@ import java.util.Map;
 
     @ConfigurationProperties 是支持JSR-303校验的,
     例如下面的 @Email
+
+
+    @ConfigurationProperties(prefix = "person") 默认是从全局配置文件中读取配置信息
+    如果想读取其它配置文件, 可以使用@PropertySource注解
+
  */
+@PropertySource(value = {"classpath:application.properites"})
 @Component
 @ConfigurationProperties(prefix = "person")
 @Validated

@@ -195,3 +195,6 @@ public class Person {
 
 
 ```
+
+### @PropertySource & @ImportResource
+@PropertySource: 加载指定的配置文件, @ConfigurationProperties 默认是从全局配置文件中读取配置信息
