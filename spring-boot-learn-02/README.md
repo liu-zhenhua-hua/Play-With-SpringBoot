@@ -318,3 +318,38 @@ person.lists=a,b,c
 person.dog.name=${person.hello:hello}_dog
 person.dog.age=3
 ```
+
+### Profile 多环境支持
+#### 1, 多Profile文件
+我们在开发的时候, 可以创建多个application-{profile}.properties/yml, 默认使用application.properties的配置
+
+
+
+#### 2, yml支持多文档块方式
+```yaml
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: dev
+---
+server:
+  port: 8081
+
+spring:
+  profiles: dev
+
+---
+server:
+  port: 8083
+
+spring:
+  profiles: prod
+```
+
+#### 3, 激活指定的Profile
+1. 在配置文件中指定: **spring.profile.active=dev** <br>
+2. 命令行的方式: java -jar spring-boot-application.jar --spring.profiles.active=dev <br>
+   在开发测试过程中可以配置命令行参数<br>
+3. 虚拟机参数
