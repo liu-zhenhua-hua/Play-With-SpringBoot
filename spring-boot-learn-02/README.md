@@ -272,8 +272,8 @@ public class LearnApplication {
 </beans>
 ```
 **Spring Boot推荐给容器添加组件的方式,推荐全注解的方式**
-1.配置类 ------> 对应之前Spring配置文件
-2.使用@Bean给容器中添加组件
+1.配置类 也就是 对应之前Spring配置文件
+2.使用 **@Bean** 给容器中添加组件
 ```java
 package org.cherry.learn.config;
 
@@ -299,4 +299,22 @@ public class MyConfiguration {
         return new HelloService();
     }
 }
+```
+### 配置文件占位符(properties文件, yml文件都支持)
+#### 1, 随机数
+```java
+${random.int}, ${random.long}
+${random.int(10)}, ${random.int[1024,65536]}
+```
+#### 2,站位符获取之前的配置的值, 如果没有可以使用(:)冒号指定默认值
+```properties
+person.lastName=Tim${random.uuid}
+person.age=${random.int}
+person.boss=false
+person.birth=2017/12/15
+person.maps.K1=V1
+person.maps.K2=V2
+person.lists=a,b,c
+person.dog.name=${person.hello:hello}_dog
+person.dog.age=3
 ```
