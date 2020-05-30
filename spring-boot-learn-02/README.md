@@ -155,6 +155,7 @@ ID              | @ConfigurationProperties            | @Value
 松散绑定(松散语法)              | 支持                               | 不支持
 SpEL              | 不支持		                  | 支持
 JSR303数据校验     | 支持                           | 不支持
+复杂类型封装(Map)   |支持                           |不支持
 
 
 ### 配置文件注入值数据校验
