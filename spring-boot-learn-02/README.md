@@ -235,3 +235,68 @@ public class Person {
 ```
 
 **@ImportResource** : 导入Spring的配置文件, 让配置文件里的内容生效
+Spring Boot里面没有Spring的配置文件, 开发人员自己编写的配置文件, 也不能自动识别
+想让Spring的配置文件生效, 加载进来, 此时把**@ImportResource** 注解标注在一个配置类上
+
+```xml
+@ImportResource 导入Spring的配置文件
+```
+
+```java
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ImportResource;
+
+
+@ImportResource(locations = {"classpath:beans.xml"})
+@SpringBootApplication
+public class LearnApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(LearnApplication.class, args);
+	}
+
+}
+```
+**在使用Spring Boot开发是不再推荐编写Spring的配置文件了**
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="helloService" class="org.cherry.learn.services.HelloService">
+
+    </bean>
+</beans>
+```
+**Spring Boot推荐给容器添加组件的方式,推荐全注解的方式**
+1.配置类 ------> 对应之前Spring配置文件
+2.使用@Bean给容器中添加组件
+```java
+package org.cherry.learn.config;
+
+import org.cherry.learn.services.HelloService;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+/**
+ * Created by tony on 2020/5/30.
+ */
+
+/*
+    @Configuration 指明该类是一个配置类, 也就是相当于之前Spring的配置文件
+    在之前的配置文件中,使用<bean><bean/> 标签添加组件
+ */
+@Configuration
+public class MyConfiguration {
+
+    //@Bean 将方法的返回值,添加到容器中, 容器中这个组件默认的ID就是方法名-helloService
+    @Bean
+    public HelloService helloService(){
+        System.out.println("MyConfiguration @Bean Adding new Component helloService.");
+        return new HelloService();
+    }
+}
+```
