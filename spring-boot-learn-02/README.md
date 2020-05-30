@@ -155,3 +155,37 @@ ID              | @ConfigurationProperties            | @Value
 松散绑定(松散语法)              | 支持                               | 不支持
 SpEL              | 不支持		                  | 支持
 JSR303数据校验     | 支持                           | 不支持
+
+
+### 配置文件注入值数据校验
+```java
+/*
+    @ConfigurationProperties 会告诉Spring Person类中的属性都是配置文件中的属性
+    prefix = "person" 指的是配置文件中person下的所有属性进行一一映射
+
+    另外这个组件只用是容器中的组件, 才能提供功能
+
+    @ConfigurationProperties 是支持JSR-303校验的,
+    例如下面的 @Email
+ */
+@Component
+@ConfigurationProperties(prefix = "person")
+public class Person {
+
+    @Email
+    private String lastName;
+    private Integer age;
+
+    private Boolean boss;
+    private Date birth;
+
+
+    private Map<String,Object> maps;
+
+    private List<Object> lists;
+
+    private Dog dog;
+
+
+
+```
