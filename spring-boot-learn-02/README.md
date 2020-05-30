@@ -197,4 +197,43 @@ public class Person {
 ```
 
 ### @PropertySource & @ImportResource
-@PropertySource: 加载指定的配置文件, @ConfigurationProperties 默认是从全局配置文件中读取配置信息
+**@PropertySource: 加载指定的配置文件,并可以指定多个值** @ConfigurationProperties 默认是从全局配置文件中读取配置信息,
+```java
+/*
+    @ConfigurationProperties 会告诉Spring Person类中的属性都是配置文件中的属性
+    prefix = "person" 指的是配置文件中person下的所有属性进行一一映射
+
+    另外这个组件只用是容器中的组件, 才能提供功能
+
+    @ConfigurationProperties 是支持JSR-303校验的,
+    例如下面的 @Email
+
+
+    @ConfigurationProperties(prefix = "person") 默认是从全局配置文件中读取配置信息
+    如果想读取其它配置文件, 可以使用@PropertySource注解, value值可以是以数组的方式
+
+ */
+@PropertySource(value = {"classpath:application.properites"})
+@Component
+@ConfigurationProperties(prefix = "person")
+@Validated
+public class Person {
+
+    @Email
+    private String lastName;
+    private Integer age;
+
+    private Boolean boss;
+    private Date birth;
+
+
+    private Map<String,Object> maps;
+
+    private List<Object> lists;
+
+    private Dog dog;
+
+
+
+
+```
