@@ -141,3 +141,4 @@ public class Person {
 ```
 
 ### application.properties 配置文件
+Spring Boot 除了可以使用yaml作为应用的配置文件, 还可以使用application.properties作为应用的配置
