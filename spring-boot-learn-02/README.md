@@ -233,3 +233,5 @@ public class Person {
 
     private Dog dog;
 ```
+
+**@ImportResource** : 导入Spring的配置文件, 让配置文件里的内容生效
