@@ -352,4 +352,36 @@ spring:
 1. 在配置文件中指定: **spring.profile.active=dev** <br>
 2. 命令行的方式: java -jar spring-boot-application.jar --spring.profiles.active=dev <br>
    在开发测试过程中可以配置命令行参数<br>
-3. 虚拟机参数
+3. 虚拟机参数 VM Option: -Dspring.profile.active=dev
+
+
+### 配置文件的加载位置
+SpringBoot应用启动会扫描以下位置的application.properties或者application.yml文件作为Spring Boot的默认配置文件.
+- file:./config/ <br>
+- file:./ <br>
+- classpath:/config/ <br>
+- classpath:/ <br>
+以上是按照**优先级从高到低**的顺序, 所有位置的文件都会被加载, **高优先级配置** 会**覆盖低优先级配置**内容
+也就是Spring Boot会从这四个位置全部加载主配置文件 **互补配置**
+
+**spring.config.location** 可以设置配置<br>
+**项目打包好之后, 我们可以使用命令行参数的形式, 启动项目时来指定配置文件的新位置; 指定的配置文件和默认加载的这些配置文件共同
+起作用.形成互补配置**
+
+```shell
+java -jar spring-boot-application.jar --spring.config.location=D:/config/application.properties
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
