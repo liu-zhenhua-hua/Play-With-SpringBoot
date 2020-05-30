@@ -149,9 +149,9 @@ Spring Boot 除了可以使用yaml作为应用的配置文件, 还可以使用ap
 ### @Value注解获取值与@ConfigurationProperties注解获取值比较
 
 
-                | @ConfigurationProperties            | @Value
+ID              | @ConfigurationProperties            | @Value
 ----------------| ------------------------------------| ---------------------------------
 01              | ArrayList                           |
 02              | Array                               | [None]
-03              | Stack, Queue		              | [None]
-04              | LinkedList                          | [None]                           
+03              | Stack, Queue		                  | [None]
+04              | LinkedList                          | [None]
