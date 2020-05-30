@@ -151,7 +151,7 @@ Spring Boot 除了可以使用yaml作为应用的配置文件, 还可以使用ap
 
                 | @ConfigurationProperties            | @Value                           |
 ----------------| ------------------------------------| ---------------------------------|----------------------
-01              | 批量注入配置文件中的属性                        |逐一指定                            |
+01              | ArrayList                           |                                  |
 02              | Array                               | [None]                           | [None]
 03              | Stack, Queue		              | [None]                           | [None]
 04              | LinkedList                          | [None]                           | [None]
