@@ -28,13 +28,13 @@ import java.util.Map;
     如果想读取其它配置文件, 可以使用@PropertySource注解, value值可以是以数组的方式
 
  */
-@PropertySource(value = {"classpath:application.properites"})
+@PropertySource(value = {"classpath:person.properties"})
 @Component
 @ConfigurationProperties(prefix = "person")
-@Validated
+//@Validated
 public class Person {
 
-    @Email
+    //@Email
     private String lastName;
     private Integer age;
 
