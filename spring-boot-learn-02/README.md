@@ -170,6 +170,7 @@ JSR303数据校验     | 支持                           | 不支持
  */
 @Component
 @ConfigurationProperties(prefix = "person")
+@Validated
 public class Person {
 
     @Email
