@@ -4,6 +4,7 @@ package org.cherry.learn.bean;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+import javax.validation.constraints.Email;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -16,11 +17,15 @@ import java.util.Map;
     prefix = "person" 指的是配置文件中person下的所有属性进行一一映射
 
     另外这个组件只用是容器中的组件, 才能提供功能
+
+    @ConfigurationProperties 是支持JSR-303校验的,
+    例如下面的 @Email
  */
 @Component
 @ConfigurationProperties(prefix = "person")
 public class Person {
 
+    @Email
     private String lastName;
     private Integer age;
 
