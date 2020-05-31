@@ -372,6 +372,10 @@ SpringBoot应用启动会扫描以下位置的application.properties或者applic
 java -jar spring-boot-application.jar --spring.config.location=D:/config/application.properties
 ```
 
+### 外部配置的加载顺序
+参考官方文档
+https://docs.spring.io/spring-boot/docs/2.1.7.RELEASE/reference/htmlsingle/#boot-features-external-config
+
 
 
 
