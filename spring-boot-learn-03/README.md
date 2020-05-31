@@ -10,4 +10,10 @@ JCL(Jakarta Commons Logging), SLF4j(Simple Logging Facade for Java),JBoss-loggin
 
 
 开发人员从左侧选一个抽象层, 再从右边选一个日志实现即可
-JCL, JBoss-logging,这两个不能用, 日志抽象我们选择 SLF4j
+JCL, JBoss-logging,这两个不能用
+
+日志抽象我们选择: **SLF4j**,
+日志实现我们选择: **Logback**
+
+
+Spring Boot: 
