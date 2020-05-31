@@ -16,4 +16,6 @@ JCL, JBoss-logging,这两个不能用
 日志实现我们选择: **Logback**
 
 
-Spring Boot:
+Spring Boot: 底层是Spring框架, Spring框架默认是用JCL (Jakarta Commons Logging) <br>
+
+Spring Boot: 选用的是SLF4j和Logback.
