@@ -379,8 +379,18 @@ https://docs.spring.io/spring-boot/docs/2.1.7.RELEASE/reference/htmlsingle/#boot
 
 
 ### Spring Boot自动配置原理
+这一点是Spring Boot的设计精髓: <br>
+1. Spring Boot启动会加载大量的自动配置类
+2. 我们需要的功能有没有Spring Boot默认写好的自动配置类
+3. 我们再来看这个自动配置类中到底配置了哪些组件
+4. 给容器中自动配置类添加组件的时候, 会从properties类中获取某些属性, 我们可以在配置文件中指定这些属性的值
 
 
+xxxAutoConfiguration: 自动配置类
+
+给容器中添加组件
+
+xxxProperties : 封装了配置文件中相关属性
 
 
 
