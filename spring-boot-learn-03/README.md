@@ -91,6 +91,7 @@ public class BookstoreApplicationTests {
 }
 ```
 
+Spring Boot修改日志默认配置:
 ```properties
 logging.level.org.cherry=trace
 
