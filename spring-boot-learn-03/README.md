@@ -5,6 +5,4 @@
 
 日志门面(日志框架的抽象层) | 日志实现
 ---------------------- | --------------------------
-JCL(Jakarta Commons Logging),          | Log4j JUL(java.util.logging), Log4j2 Logback
-SLF4j(Simple Logging Facade for Java),
-JBoss-logging
+JCL(Jakarta Commons Logging), SLF4j(Simple Logging Facade for Java),JBoss-logging | Log4j JUL(java.util.logging), Log4j2 Logback
