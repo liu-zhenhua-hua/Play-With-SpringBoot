@@ -19,3 +19,10 @@ JCL, JBoss-logging,这两个不能用
 Spring Boot: 底层是Spring框架, Spring框架默认是用JCL (Jakarta Commons Logging) <br>
 
 Spring Boot: 选用的是SLF4j和Logback.
+
+
+
+### SLF4j的使用
+#### 1, 如何在系统中使用SLF4j
+在日后的开发中, 日志记录方法的调用, 不应该直接来调用日志的实现类, 而是调用日志抽象层里的方法<br>
+每一个日志实现框架都有自己的配置文件, 使用SLF4j以后, 配置文件还是做成日志实现框架的配置
