@@ -79,7 +79,8 @@ public class BookstoreApplicationTests {
 		logger.trace("This is Trace Information ");
 		logger.debug("This is Debug Information ");
 
-		//Spring Boot 默认是的info级别的日志输出级别, 可在配置文件中进行调整设置, 没有指定级别的就用Spring Boot默认规定的
+		//Spring Boot 默认是的info级别的日志输出级别, 可在配置文件中进行调整设置,
+		//没有指定级别的就用Spring Boot默认规定的
 		//级别
 		logger.info("This is infor Information ");
 		logger.warn("This is warn Information ");
