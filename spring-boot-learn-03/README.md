@@ -90,3 +90,25 @@ public class BookstoreApplicationTests {
 
 }
 ```
+
+```properties
+logging.level.org.cherry=trace
+
+
+
+#当前项目下,生成spring-boot-log 这个日志文件
+#也可以指定日志文件的路径
+logging.file=spring-boot-log.log
+
+
+
+#在当前磁盘的根路径下创建spring文件夹和里面的log文件夹, 使用spring.log作为默认文件
+logging.path=/spring/log
+
+
+#在控制台输出日志的格式
+logging.pattern.console=%d{yyyy-mm-dd} [%thread] %-5level %logger{50} - %ms%n
+
+#指定文件中输出日志的格式
+logging.pattern.file=%d{yyyy-mm-dd} ==== | ==== [%thread] %-5level %logger{50} ==== %ms%n
+```
