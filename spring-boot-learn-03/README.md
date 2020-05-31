@@ -44,3 +44,6 @@ public class HelloWorld {
 2. 用中间包来替换原有的日志框架 <br>
 3. 导入SLF4j的其它实现
 
+但是这个好像是Spring Boot 1.X的策略, Spring Boot 2.X与之前的版本相比,是有一定的差别(稍后再做研究)
+
+
