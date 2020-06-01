@@ -130,3 +130,17 @@ JUL(java Util Logging) | **logging.properties**
 1. Logback.xml        : 这个配置文件会被日志框架直接给识别了
 2. Logback-spring.xml : 日志框架不会直接加载日志配置, 由Spring Boot来解析日志配置, 可以使用Spring Boot的高级Profile
 功能
+
+```xml
+<springProfile name="staging">
+	<!-- configuration to be enabled when the "staging" profile is active -->
+</springProfile>
+
+<springProfile name="dev | staging">
+	<!-- configuration to be enabled when the "dev" or "staging" profiles are active -->
+</springProfile>
+
+<springProfile name="!production">
+	<!-- configuration to be enabled when the "production" profile is not active -->
+</springProfile>
+```
