@@ -121,6 +121,6 @@ logging.pattern.file=%d{yyyy-mm-dd} ==== | ==== [%thread] %-5level %logger{50} =
 
 Logging System  | Customization File
 ----------------| --------------------------------
-Logback         | logback-spring.xml, logback-spring.groovy, logback.xml, or logback.groovy
-Log4j2          | log4j2-spring.xml or log4j2.xml
-JUL(java Util Logging) | logging.properties
+Logback         | **logback-spring.xml**, logback-spring.groovy, **logback.xml**, or logback.groovy
+Log4j2          | **log4j2-spring.xml or log4j2.xml**
+JUL(java Util Logging) | **logging.properties**
