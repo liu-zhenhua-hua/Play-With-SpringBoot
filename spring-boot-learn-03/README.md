@@ -116,7 +116,7 @@ logging.pattern.file=%d{yyyy-mm-dd} ==== | ==== [%thread] %-5level %logger{50} =
 ```
 
 
-### 指定配置
+### 指定配置配置文件
 在类路径下放上每个日志框架自己的配置文件即可, Spring Boot就不使用默认配置了
 
 Logging System  | Customization File
