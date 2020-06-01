@@ -124,3 +124,9 @@ Logging System  | Customization File
 Logback         | **logback-spring.xml**, logback-spring.groovy, **logback.xml**, or logback.groovy
 Log4j2          | **log4j2-spring.xml or log4j2.xml**
 JUL(java Util Logging) | **logging.properties**
+
+
+**这里要注意:** <br>
+1. Logback.xml        : 这个配置文件会被日志框架直接给识别了
+2. Logback-spring.xml : 日志框架不会直接加载日志配置, 由Spring Boot来解析日志配置, 可以使用Spring Boot的高级Profile
+功能
