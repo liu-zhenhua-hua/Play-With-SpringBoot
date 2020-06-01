@@ -114,3 +114,7 @@ logging.pattern.console=%d{yyyy-mm-dd} [%thread] %-5level %logger{50} - %ms%n
 #指定文件中输出日志的格式
 logging.pattern.file=%d{yyyy-mm-dd} ==== | ==== [%thread] %-5level %logger{50} ==== %ms%n
 ```
+
+
+### 指定配置
+在类路径下放上每个日志框架自己的配置文件即可, Spring Boot就不使用默认配置了
