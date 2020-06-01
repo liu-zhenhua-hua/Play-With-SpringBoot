@@ -161,6 +161,7 @@ JSR303数据校验     | 支持                           | 不支持
 如果开发人员只是在某个业务逻辑中需要获取一下配置文件中的某项值, 可以使用**@Value**注解, 如果我们专门编写
 一个JavaBean和配置文件进行映射时, 我们就是直接使用**@ConfigurationProperties**
 
+关于数据校验, 请参考(https://www.ibm.com/developerworks/cn/java/j-lo-jsr303/index.html)
 
 ### 配置文件注入值数据校验
 ```java
