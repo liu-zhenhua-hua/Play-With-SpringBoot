@@ -37,3 +37,5 @@ public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		}
 	}
 ```
+1. 所有的/webjars/**, 都去classpath:/META-INF/resources/webjars/ 找资源 <br>
+
