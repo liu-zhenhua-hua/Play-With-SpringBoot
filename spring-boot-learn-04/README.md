@@ -128,3 +128,9 @@ localhost:8080/  找index页面 <br>
 
 		}
 ```
+
+### 设置自定义的静态资源路径
+
+```properties
+spring.resources.static-locations=classpath:/hello/, classpath:/second
+```
