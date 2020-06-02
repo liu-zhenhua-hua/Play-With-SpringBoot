@@ -16,6 +16,12 @@ xxxxProperties: 配置类封装配置文件的内容
 **Spring Boot对静态资源的映射规则**
 
 ```java
+@ConfigurationProperties(prefix = "spring.resources", ignoreUnknownFields = false)
+public class ResourceProperties 
+```
+
+
+```java
 @Override
 public void addResourceHandlers(ResourceHandlerRegistry registry) {
 	if (!this.resourceProperties.isAddMappings()) {
@@ -47,4 +53,5 @@ webjars 以jar包的方式引入静态资源 (https://www.webjars.org/); 例如�
     <version>3.5.1</version>
 </dependency>
 ```
+访问资源的时候 localhost:8080/webjars/jquery/3.5.1/jquery.js
 
