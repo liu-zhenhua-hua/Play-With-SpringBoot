@@ -67,7 +67,7 @@ webjars 以jar包的方式引入静态资源 (https://www.webjars.org/); 例如�
 localhost:8080/abc ---> 去静态资源文件夹里找abc <br>
 
 
-3. 欢迎页, 静态资源文件夹下的所有index.html页面; 被**"/**"**映射
+3. 欢迎页, 静态资源文件夹下的所有index.html页面; 被"/**"映射
 ```java
 @Bean
 public WelcomePageHandlerMapping welcomePageHandlerMapping(ApplicationContext applicationContext) {
