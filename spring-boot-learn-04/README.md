@@ -69,6 +69,7 @@ localhost:8080/abc ---> 去静态资源文件夹里找abc <br>
 
 3. 欢迎页, 静态资源文件夹下的所有index.html页面; 被"/**"映射
 ```java
+//设置欢迎页
 @Bean
 public WelcomePageHandlerMapping welcomePageHandlerMapping(ApplicationContext applicationContext) {
 	WelcomePageHandlerMapping welcomePageHandlerMapping = new WelcomePageHandlerMapping(
@@ -77,4 +78,53 @@ public WelcomePageHandlerMapping welcomePageHandlerMapping(ApplicationContext ap
 		welcomePageHandlerMapping.setInterceptors(getInterceptors());
 		return welcomePageHandlerMapping;
 }
+```
+
+localhost:8080/  找index页面 <br>
+
+
+4. 配置Favorite Icon <br>
+所有的"**/favicon.ico" 都在静态资源文件夹下找
+```java
+@Configuration
+		@ConditionalOnProperty(value = "spring.mvc.favicon.enabled", matchIfMissing = true)
+		public static class FaviconConfiguration implements ResourceLoaderAware {
+
+			private final ResourceProperties resourceProperties;
+
+			private ResourceLoader resourceLoader;
+
+			public FaviconConfiguration(ResourceProperties resourceProperties) {
+				this.resourceProperties = resourceProperties;
+			}
+
+			@Override
+			public void setResourceLoader(ResourceLoader resourceLoader) {
+				this.resourceLoader = resourceLoader;
+			}
+
+			@Bean
+			public SimpleUrlHandlerMapping faviconHandlerMapping() {
+				SimpleUrlHandlerMapping mapping = new SimpleUrlHandlerMapping();
+				mapping.setOrder(Ordered.HIGHEST_PRECEDENCE + 1);
+				mapping.setUrlMap(Collections.singletonMap("**/favicon.ico", faviconRequestHandler()));
+				return mapping;
+			}
+
+			@Bean
+			public ResourceHttpRequestHandler faviconRequestHandler() {
+				ResourceHttpRequestHandler requestHandler = new ResourceHttpRequestHandler();
+				requestHandler.setLocations(resolveFaviconLocations());
+				return requestHandler;
+			}
+
+			private List<Resource> resolveFaviconLocations() {
+				String[] staticLocations = getResourceLocations(this.resourceProperties.getStaticLocations());
+				List<Resource> locations = new ArrayList<>(staticLocations.length + 1);
+				Arrays.stream(staticLocations).map(this.resourceLoader::getResource).forEach(locations::add);
+				locations.add(new ClassPathResource("/"));
+				return Collections.unmodifiableList(locations);
+			}
+
+		}
 ```
