@@ -9,6 +9,6 @@
 各个场景Spring Boot帮我们配置了什么? 能不能修改? 能修改哪些配置,能不能扩展 <br>
 ```java
 xxxxAutoConfiguration: 帮助开发者给容器中自动配置组件
-
+xxxxProperties: 配置类封装配置文件的内容
 ```
 
