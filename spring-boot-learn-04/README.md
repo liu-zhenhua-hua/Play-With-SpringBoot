@@ -38,4 +38,13 @@ public void addResourceHandlers(ResourceHandlerRegistry registry) {
 	}
 ```
 1. 所有的/webjars/**, 都去classpath:/META-INF/resources/webjars/ 找资源 <br>
+webjars 以jar包的方式引入静态资源 (https://www.webjars.org/); 例如下面的例子
+
+```xml
+<dependency>
+    <groupId>org.webjars</groupId>
+    <artifactId>jquery</artifactId>
+    <version>3.5.1</version>
+</dependency>
+```
 
