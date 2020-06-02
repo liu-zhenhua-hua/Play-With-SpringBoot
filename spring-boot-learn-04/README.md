@@ -12,3 +12,7 @@ xxxxAutoConfiguration: 帮助开发者给容器中自动配置组件
 xxxxProperties: 配置类封装配置文件的内容
 ```
 
+
+**Spring Boot对静态资源的映射规则**
+
+
