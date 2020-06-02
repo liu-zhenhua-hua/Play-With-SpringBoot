@@ -17,7 +17,8 @@ xxxxProperties: 配置类封装配置文件的内容
 
 ```java
 @ConfigurationProperties(prefix = "spring.resources", ignoreUnknownFields = false)
-public class ResourceProperties 
+public class ResourceProperties
+// 可以设置和静态资源有关的参数, 缓存时间
 ```
 
 
@@ -53,5 +54,27 @@ webjars 以jar包的方式引入静态资源 (https://www.webjars.org/); 例如�
     <version>3.5.1</version>
 </dependency>
 ```
-访问资源的时候 localhost:8080/webjars/jquery/3.5.1/jquery.js
+访问资源的时候 localhost:8080/webjars/jquery/3.5.1/jquery.js <br>
 
+2. "/**" 当你访问当前项目的任何资源
+```java
+"classpath:/META-INF/resources/",
+"classpath:/resources/",
+"classpath:/static/",
+"classpath:/public/";
+"/" -- 当前项目根路径, Spring Boot 2.1.7中没有看到该定义, 需要再仔细确认一下
+```
+localhost:8080/abc ---> 去静态资源文件夹里找abc <br>
+
+
+3. 欢迎页, 静态资源文件夹下的所有index.html页面; 被**"/**"**映射
+```java
+@Bean
+public WelcomePageHandlerMapping welcomePageHandlerMapping(ApplicationContext applicationContext) {
+	WelcomePageHandlerMapping welcomePageHandlerMapping = new WelcomePageHandlerMapping(
+		new TemplateAvailabilityProviders(applicationContext), applicationContext, getWelcomePage(),
+		this.mvcProperties.getStaticPathPattern());
+		welcomePageHandlerMapping.setInterceptors(getInterceptors());
+		return welcomePageHandlerMapping;
+}
+```
