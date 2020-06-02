@@ -144,3 +144,5 @@ JUL(java Util Logging) | **logging.properties**
 	<!-- configuration to be enabled when the "production" profile is not active -->
 </springProfile>
 ```
+
+具体的日志配置,参看资源文件夹下的logback-spring.xml文件的内容
