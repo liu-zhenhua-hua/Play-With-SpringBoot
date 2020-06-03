@@ -24,6 +24,13 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		<!-- 引入Thymeleaf 模版引擎 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+
+
 		<!-- 引用Webjars JQuery -->
 		<dependency>
 			<groupId>org.webjars</groupId>

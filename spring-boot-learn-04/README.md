@@ -134,3 +134,9 @@ localhost:8080/  找index页面 <br>
 ```properties
 spring.resources.static-locations=classpath:/hello/, classpath:/second
 ```
+
+
+### thymeleaf 模版引擎
+如何使用thymeleaf: <br>
+1. 引入thymeleaf的Starters <br>
+2.
