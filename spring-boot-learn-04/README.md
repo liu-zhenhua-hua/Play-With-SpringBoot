@@ -166,7 +166,6 @@ public class ThymeleafProperties {
 
 ### Spring MVC Auto Configuration
 
-```properties
 Spring Boot provides auto-configuration for Spring MVC that works well with most applications.
 
 The auto-configuration adds the following features on top of Spring’s defaults:
@@ -188,5 +187,4 @@ or ExceptionHandlerExceptionResolver,you can declare a WebMvcRegistrationsAdapte
 
 If you want to take complete control of Spring MVC, you can add your own @Configuration annotated with @EnableWebMvc.
 
-```
 
