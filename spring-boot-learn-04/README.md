@@ -161,4 +161,4 @@ public class ThymeleafProperties {
 	public static final String DEFAULT_SUFFIX = ".html";
 ```
 
-
+具体的语法参看官网的用户手册 <br>
