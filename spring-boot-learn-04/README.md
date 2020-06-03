@@ -162,3 +162,27 @@ public class ThymeleafProperties {
 ```
 
 具体的语法参看官网的用户手册 <br>
+
+
+### Spring MVC Auto Configuration
+
+```properties
+Spring Boot provides auto-configuration for Spring MVC that works well with most applications.
+
+The auto-configuration adds the following features on top of Spring’s defaults:
+
+    Inclusion of ContentNegotiatingViewResolver and BeanNameViewResolver beans.
+    Support for serving static resources, including support for WebJars (covered later in this document)).
+    Automatic registration of Converter, GenericConverter, and Formatter beans.
+    Support for HttpMessageConverters (covered later in this document).
+    Automatic registration of MessageCodesResolver (covered later in this document).
+    Static index.html support.
+    Custom Favicon support (covered later in this document).
+    Automatic use of a ConfigurableWebBindingInitializer bean (covered later in this document).
+
+If you want to keep Spring Boot MVC features and you want to add additional MVC configuration (interceptors, formatters, view controllers, and other features), you can add your own @Configuration class of type WebMvcConfigurer but without @EnableWebMvc. If you wish to provide custom instances of RequestMappingHandlerMapping, RequestMappingHandlerAdapter, or ExceptionHandlerExceptionResolver, you can declare a WebMvcRegistrationsAdapter instance to provide such components.
+
+If you want to take complete control of Spring MVC, you can add your own @Configuration annotated with @EnableWebMvc.
+
+```
+
