@@ -137,6 +137,12 @@ spring.resources.static-locations=classpath:/hello/, classpath:/second
 
 
 ### thymeleaf 模版引擎
-如何使用thymeleaf: <br>
-1. 引入thymeleaf的Starters <br>
-2.
+
+引入thymeleaf模版引擎的Starter
+```xml
+	<!-- 引入Thymeleaf 模版引擎 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+```
