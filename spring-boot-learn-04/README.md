@@ -146,3 +146,17 @@ spring.resources.static-locations=classpath:/hello/, classpath:/second
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 ```
+
+
+### thymeleaf的使用&语法
+
+```java
+@ConfigurationProperties(prefix = "spring.thymeleaf")
+public class ThymeleafProperties {
+
+	private static final Charset DEFAULT_ENCODING = StandardCharsets.UTF_8;
+
+	public static final String DEFAULT_PREFIX = "classpath:/templates/";
+
+	public static final String DEFAULT_SUFFIX = ".html";
+```
