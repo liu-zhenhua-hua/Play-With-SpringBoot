@@ -168,9 +168,14 @@ public class ThymeleafProperties {
 
 Spring Boot provides auto-configuration for Spring MVC that works well with most applications.
 
+Spring Boot 已经配置好了SpringMVC
+
 The auto-configuration adds the following features on top of Spring’s defaults:
+下面就是Spring Boot对SpringMVC的默认配置
 
     Inclusion of ContentNegotiatingViewResolver and BeanNameViewResolver beans.
+    自动配置了 ViewResolver(视图解析器: 根据方法的返回值得到视图对象(View),视图对象决定如何渲染(转发? 重定向?)
+
     Support for serving static resources, including support for WebJars (covered later in this document)).
     Automatic registration of Converter, GenericConverter, and Formatter beans.
     Support for HttpMessageConverters (covered later in this document).
