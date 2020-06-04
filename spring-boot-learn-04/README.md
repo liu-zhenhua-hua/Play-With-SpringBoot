@@ -190,6 +190,7 @@ The auto-configuration adds the following features on top of Spring’s defaults
     Converter: 转换器; public String hello(User user): 类型转换使用Converter.
     Formatter: 格式化器;
 
+    自己添加的格式化器转换器, 我们只需要放在容器中即可
     Support for HttpMessageConverters (covered later in this document).
 
     HttpMessageConverters :  SpringMVC 用来转换Http请求和响应的; User ---> JSON
@@ -198,10 +199,12 @@ The auto-configuration adds the following features on top of Spring’s defaults
 
     自己给容器中添加HttpMessageConverter, 只需要将自己的组件注册到容器中(@Bean,@Component)
 
-    
+
 
     Automatic registration of MessageCodesResolver (covered later in this document).
     Automatic use of a ConfigurableWebBindingInitializer bean (covered later in this document).
+
+
 
 If you want to keep Spring Boot MVC features and you want to add additional MVC configuration
 (interceptors, formatters, view controllers, and other features),
