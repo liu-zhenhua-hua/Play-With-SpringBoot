@@ -212,6 +212,10 @@ The auto-configuration adds the following features on top of Spring’s defaults
 If you want to keep Spring Boot MVC features and you want to add additional MVC configuration
 (interceptors, formatters, view controllers, and other features),
 you can add your own @Configuration class of type WebMvcConfigurer but without @EnableWebMvc.
+
+如果开发人员想添加额外的MVC Configuration 例如: interceptor, formatters, view Controller 等等
+**编写一个配置类(@Configuration) 并且是WebMvcConfigurer类型; 不能标注@EnableWebMvc 注解**
+
 If you wish to provide custom instances of RequestMappingHandlerMapping, RequestMappingHandlerAdapter,
 or ExceptionHandlerExceptionResolver,you can declare a WebMvcRegistrationsAdapter instance to provide such components.
 
@@ -222,4 +226,5 @@ If you want to take complete control of Spring MVC, you can add your own @Config
 ### 如何修改Spring Boot的默认配置
 模式:
     1. Spring Boot在自动配置很多组件的时候, 先看容器中有没有用户自己配置的(@Bean, @Component)如果有就使用用户配置的, 如果没有, 才自动配置
-    
+       如果有些组件可以有多个(ViewResolver) 将用户配置的和自己默认的组合起来
+    2.
