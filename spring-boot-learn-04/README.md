@@ -224,7 +224,7 @@ If you want to take complete control of Spring MVC, you can add your own @Config
 
 
 ### 如何修改Spring Boot的默认配置
-模式:
-    1. Spring Boot在自动配置很多组件的时候, 先看容器中有没有用户自己配置的(@Bean, @Component)如果有就使用用户配置的, 如果没有, 才自动配置
-       如果有些组件可以有多个(ViewResolver) 将用户配置的和自己默认的组合起来
+模式: <br>
+    1. Spring Boot在自动配置很多组件的时候, 先看容器中有没有用户自己配置的(@Bean, @Component)如果有就使用用户配置的, 如果没有, 才自动配置<br>
+       如果有些组件可以有多个(ViewResolver) 将用户配置的和自己默认的组合起来 <br>
     2.
