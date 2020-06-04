@@ -218,3 +218,8 @@ or ExceptionHandlerExceptionResolver,you can declare a WebMvcRegistrationsAdapte
 If you want to take complete control of Spring MVC, you can add your own @Configuration annotated with @EnableWebMvc.
 
 
+
+### 如何修改Spring Boot的默认配置
+模式:
+    1. Spring Boot在自动配置很多组件的时候, 先看容器中有没有用户自己配置的(@Bean, @Component)如果有就使用用户配置的, 如果没有, 才自动配置
+    
