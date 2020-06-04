@@ -224,6 +224,7 @@ or ExceptionHandlerExceptionResolver,you can declare a WebMvcRegistrationsAdapte
 
 If you want to take complete control of Spring MVC, you can add your own @Configuration annotated with @EnableWebMvc.
 
+如果开发人员想全面接管SpringMVC 就自定义一个配置类(@Configuration) 并使用@EnableWebMvc 注解
 
 
 ### 如何修改Spring Boot的默认配置
