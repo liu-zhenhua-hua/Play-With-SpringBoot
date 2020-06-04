@@ -191,6 +191,15 @@ The auto-configuration adds the following features on top of Spring’s defaults
     Formatter: 格式化器;
 
     Support for HttpMessageConverters (covered later in this document).
+
+    HttpMessageConverters :  SpringMVC 用来转换Http请求和响应的; User ---> JSON
+
+    HttpMessageConverters : 是从容器中, 获取所有的HttpMessageConverter:
+
+    自己给容器中添加HttpMessageConverter, 只需要将自己的组件注册到容器中(@Bean,@Component)
+
+    
+
     Automatic registration of MessageCodesResolver (covered later in this document).
     Automatic use of a ConfigurableWebBindingInitializer bean (covered later in this document).
 
