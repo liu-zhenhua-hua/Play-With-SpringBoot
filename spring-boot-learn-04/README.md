@@ -187,6 +187,9 @@ The auto-configuration adds the following features on top of Spring’s defaults
 
 
     Automatic registration of Converter, GenericConverter, and Formatter beans.
+    Converter: 转换器; public String hello(User user): 类型转换使用Converter.
+    Formatter: 格式化器;
+
     Support for HttpMessageConverters (covered later in this document).
     Automatic registration of MessageCodesResolver (covered later in this document).
     Automatic use of a ConfigurableWebBindingInitializer bean (covered later in this document).
