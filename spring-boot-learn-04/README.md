@@ -202,9 +202,9 @@ The auto-configuration adds the following features on top of Spring’s defaults
 
 
     Automatic registration of MessageCodesResolver (covered later in this document).
+    定义错误代码生成规则
     Automatic use of a ConfigurableWebBindingInitializer bean (covered later in this document).
-
-
+    开发者可以配置一个ConfigurableWebBindingInitializer 来替换默认的 (添加到容器中即可)
 
 If you want to keep Spring Boot MVC features and you want to add additional MVC configuration
 (interceptors, formatters, view controllers, and other features),
