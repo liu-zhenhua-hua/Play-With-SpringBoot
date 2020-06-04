@@ -180,11 +180,15 @@ The auto-configuration adds the following features on top of Spring’s defaults
     如何定制: 我们自己可以给容器中添加一个视图解析器; 自动将其组合进来;
 
     Support for serving static resources, including support for WebJars (covered later in this document)).
+    静态资源文件夹路径
+
+    Static index.html support. 静态首页访问
+    Custom Favicon support (covered later in this document). favicon.ico
+
+
     Automatic registration of Converter, GenericConverter, and Formatter beans.
     Support for HttpMessageConverters (covered later in this document).
     Automatic registration of MessageCodesResolver (covered later in this document).
-    Static index.html support.
-    Custom Favicon support (covered later in this document).
     Automatic use of a ConfigurableWebBindingInitializer bean (covered later in this document).
 
 If you want to keep Spring Boot MVC features and you want to add additional MVC configuration
