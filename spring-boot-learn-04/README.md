@@ -214,7 +214,7 @@ If you want to keep Spring Boot MVC features and you want to add additional MVC 
 you can add your own @Configuration class of type WebMvcConfigurer but without @EnableWebMvc.
 
 如果开发人员想添加额外的MVC Configuration 例如: interceptor, formatters, view Controller 等等
-**编写一个配置类(@Configuration) 并且是WebMvcConfigurer类型; 不能标注@EnableWebMvc 注解**
+**编写一个配置类(@Configuration) 并且是WebMvcConfigurer类型; 不能标注@EnableWebMvc 注解** 这种方式既保留了所有的自动配置, 也能用我们的扩展配置
 
 If you wish to provide custom instances of RequestMappingHandlerMapping, RequestMappingHandlerAdapter,
 or ExceptionHandlerExceptionResolver,you can declare a WebMvcRegistrationsAdapter instance to provide such components.
