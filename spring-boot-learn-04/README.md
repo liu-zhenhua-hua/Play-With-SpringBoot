@@ -206,6 +206,9 @@ The auto-configuration adds the following features on top of Spring’s defaults
     Automatic use of a ConfigurableWebBindingInitializer bean (covered later in this document).
     开发者可以配置一个ConfigurableWebBindingInitializer 来替换默认的 (添加到容器中即可)
 
+    初始化WebDataBinder;
+    请求数据 ----> JavaBean;
+
 If you want to keep Spring Boot MVC features and you want to add additional MVC configuration
 (interceptors, formatters, view controllers, and other features),
 you can add your own @Configuration class of type WebMvcConfigurer but without @EnableWebMvc.
