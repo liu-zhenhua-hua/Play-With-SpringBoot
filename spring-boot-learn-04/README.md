@@ -268,6 +268,15 @@ public class MessageSourceAutoConfiguration {
 
 	private static final Resource[] NO_RESOURCES = {};
 
+    /*
+       MessageSourceProperties 类中定义了一个basename
+
+       private String basename = "messages";
+
+       我们的配置文件(国际化配置文件) 可以直接放在类路径下叫message.properties,
+
+    */
+
 	@Bean
 	@ConfigurationProperties(prefix = "spring.messages")
 	public MessageSourceProperties messageSourceProperties() {
@@ -294,3 +303,45 @@ public class MessageSourceAutoConfiguration {
 		return messageSource;
 	}
 ```
+3. 去页面获取国际化信息(thymeleaf 中使用 th:text="#{}" 获取国际化信息)
+
+```html
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<title>Signin Template for Bootstrap</title>
+		<!-- Bootstrap core CSS -->
+		<link href="asserts/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/4.0.0/css/bootstrap.css}" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="asserts/css/signin.css" th:href="@{/asserts/css/signin.css}" rel="stylesheet">
+	</head>
+
+	<body class="text-center">
+		<form class="form-signin" action="dashboard.html">
+			<img class="mb-4" th:href="@{asserts/img/bootstrap-solid.svg}" src="asserts/img/bootstrap-solid.svg" alt="" width="72" height="72">
+			<h1 class="h3 mb-3 font-weight-normal" th:text="#{login.tip}">Please sign in</h1>
+			<label class="sr-only" th:text="#{login.username}">Username</label>
+			<input type="text" class="form-control" placeholder="Username" th:placeholder="#{login.username}" required="" autofocus="">
+			<label class="sr-only" th:text="#{login.password}">Password</label>
+			<input type="password" class="form-control" placeholder="Password" th:placeholder="#{login.password}" required="">
+			<div class="checkbox mb-3">
+				<label>
+          <input type="checkbox" value="remember-me"> [[#{login.remember}]]
+        </label>
+			</div>
+			<button class="btn btn-lg btn-primary btn-block" type="submit" th:text="#{login.btn}">Sign in</button>
+			<p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+			<a class="btn btn-sm">中文</a>
+			<a class="btn btn-sm">English</a>
+		</form>
+
+	</body>
+
+</html>
+
+```
+根据浏览器的语言设置,切换国际化
