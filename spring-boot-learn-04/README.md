@@ -344,4 +344,51 @@ public class MessageSourceAutoConfiguration {
 </html>
 
 ```
-根据浏览器的语言设置,切换国际化
+以上的页面是根据浏览器的语言设置,切换国际化 <br>
+
+
+如何根据页面上的链接,切换国际化信息
+
+原理: 国际化local(区域信息对象); LocalResolver(获取区域信息对象)
+```java
+@Bean
+		@ConditionalOnMissingBean
+		@ConditionalOnProperty(prefix = "spring.mvc", name = "locale")
+		public LocaleResolver localeResolver() {
+			if (this.mvcProperties.getLocaleResolver() == WebMvcProperties.LocaleResolver.FIXED) {
+				return new FixedLocaleResolver(this.mvcProperties.getLocale());
+			}
+			//AcceptHeaderLocaleResolver() 根据请求头的区域信息,获取Locale
+			AcceptHeaderLocaleResolver localeResolver = new AcceptHeaderLocaleResolver();
+			localeResolver.setDefaultLocale(this.mvcProperties.getLocale());
+			return localeResolver;
+		}
+```
+
+4.点击链接切换国际化, 自定义一个LocaleResolver来实现
+```java
+/*
+    在链接上添加区域信息
+ */
+
+public class MyLocaleResolver implements LocaleResolver{
+    @Override
+    public Locale resolveLocale(HttpServletRequest request) {
+        String l = request.getParameter("l");
+        Locale locale = Locale.getDefault();
+
+        if(!StringUtils.isEmpty(l)){
+            String[] split = l.split("_");
+            locale = new Locale(split[0],split[1]);
+        }
+
+
+        return locale;
+    }
+
+    @Override
+    public void setLocale(HttpServletRequest request, @Nullable HttpServletResponse response, @Nullable Locale locale) {
+
+    }
+}
+```
