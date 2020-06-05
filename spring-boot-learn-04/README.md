@@ -244,4 +244,17 @@ If you want to take complete control of Spring MVC, you can add your own @Config
 2. 使用ResourceBundleMessageSource管理国际化资源文件 <br>
 3. 在页面fmt:message取出国际化内容 <br>
 
-以上这三条是以前SpringMVC开发国际化的步骤, 而使用Spring Boot开发
+以上这三条是以前SpringMVC开发国际化的步骤. <br>
+
+
+使用Spring Boot开发国际化的步骤
+1. 编写国际化的配置文件, 抽取页面需要显示的国际化消息
+```properties
+login.btn=Sign In
+login.password=Password
+login.remember=Remember Me
+login.tip=Please sign in
+login.username=Username
+```
+
+2. Spring Boot自动配置好了管理国际化资源文件的组件: (**MessageSourceAutoConfiguration**)
