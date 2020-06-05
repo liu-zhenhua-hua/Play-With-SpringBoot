@@ -233,3 +233,15 @@ If you want to take complete control of Spring MVC, you can add your own @Config
     2. 在Spring Boot 中会有非常多的xxxConfigurer 帮助我们进行扩展配置
 <br>
 
+
+###
+
+
+
+
+### Spring Boot 国际化开发
+1. 编写国际化配置文件 <br>
+2. 使用ResourceBundleMessageSource管理国际化资源文件 <br>
+3. 在页面fmt:message取出国际化内容 <br>
+
+以上这三条是以前SpringMVC开发国际化的步骤, 而使用Spring Boot开发
