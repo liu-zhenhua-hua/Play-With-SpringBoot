@@ -452,9 +452,13 @@ Spring Boot 错误处理的原理:**ErrorMvcAutoConfiguration** 错误处理的�
 
 
 错误处理步骤:
-  1. 一旦系统出现4xx或者5xx之类的错误, ErrorPageCustomizer就会生效(定制错误的响应规则) 出现错误之后来到/error请求,就会被 <br>
-  BasicErrorController处理
+1. 一旦系统出现4xx或者5xx之类的错误, ErrorPageCustomizer就会生效(定制错误的响应规则) 出现错误之后来到/error请求,就会被 <br>
+BasicErrorController处理
 
+
+
+
+### 定制Spring Boot的错误处理
 
 1.  如何定制错误的页面
 
