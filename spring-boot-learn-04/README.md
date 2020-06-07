@@ -1,5 +1,7 @@
 ### Spring Boot Web开发
 
+(https://note.clboy.cn/#/backend/springboot/_sidebar -- Spring Boot 课程笔记)
+
 使用Spring Boot: <br>
 1. 创建Spring Boot应用, 选中我们需要的模块(Starters) 也就是各种各样的场景 <br>
 2. Spring Boot已经默认将这些场景配置好了, 开发人员只需要在配置文件中指定少量的配置就可以运行起来 <br>
@@ -392,3 +394,11 @@ public class MyLocaleResolver implements LocaleResolver{
     }
 }
 ```
+
+
+
+错误消息的处理语句(thymeleaf 语法)
+```html
+<p style="color:red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+```
+

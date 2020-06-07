@@ -21,7 +21,7 @@ public class MyController {
                         Map<String,Object> map){
 
         if(!StringUtils.isEmpty(username) && "123456".equals(password)){
-            return "dashboard";
+            return "redirect:/main.html";
         }else{
             map.put("msg","Login Failed");
             return "login";
