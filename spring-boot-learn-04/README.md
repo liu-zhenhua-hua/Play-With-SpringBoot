@@ -448,9 +448,17 @@ Spring Boot 错误处理的原理:**ErrorMvcAutoConfiguration** 错误处理的�
     1. DefaultErrorAttributes
     2. BasicErrorController
     3. ErrorPageCustomizer
+    ```java
+    	/**
+    	 * Path of the error controller.
+    	 */
+    	@Value("${error.path:/error}")
+    	private String path = "/error";
+    ```
     4. DefaultErrorViewResolver
 
-
+    错误处理步骤:
+        1. 一旦系统出现4xx或者5xx之类的错误, ErrorPageCustomizer就会生效(定制错误的响应规则)
 
 
 1.  如何定制错误的页面
