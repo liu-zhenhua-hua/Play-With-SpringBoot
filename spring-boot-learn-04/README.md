@@ -438,3 +438,18 @@ public class LoginHandlerInterceptor implements HandlerInterceptor {
 
 
 该项目未完待续
+
+....................... <br>
+
+
+### Spring Boot默认的错误处理机制
+
+Spring Boot 错误处理的原理:**ErrorMvcAutoConfiguration** 错误处理的自动配置
+
+
+
+
+1.  如何定制错误的页面
+
+
+2.  如何定制错误数据(其它终端访问应用返回的JSON数据)
