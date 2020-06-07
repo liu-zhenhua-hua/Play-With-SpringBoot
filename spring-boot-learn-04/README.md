@@ -491,7 +491,7 @@ Spring Boot 错误处理的原理:**ErrorMvcAutoConfiguration** 错误处理的�
     }
 ```
 
-响应页面
+响应页面 (去哪个页面)是由**DefaultErrorViewResolver** 解析得到的
 ```java
 	protected ModelAndView resolveErrorView(HttpServletRequest request, HttpServletResponse response, HttpStatus status,
 			Map<String, Object> model) {
@@ -505,11 +505,37 @@ Spring Boot 错误处理的原理:**ErrorMvcAutoConfiguration** 错误处理的�
 	}
 ```
 
+DefaultErrorViewResolver 是如何解析的
+```java
+@Override
+	public ModelAndView resolveErrorView(HttpServletRequest request, HttpStatus status, Map<String, Object> model) {
+		ModelAndView modelAndView = resolve(String.valueOf(status.value()), model);
+		if (modelAndView == null && SERIES_VIEWS.containsKey(status.series())) {
+			modelAndView = resolve(SERIES_VIEWS.get(status.series()), model);
+		}
+		return modelAndView;
+	}
+
+	private ModelAndView resolve(String viewName, Map<String, Object> model) {
+	    //Spring Boot默认会去到一个页面, error/404
+		String errorViewName = "error/" + viewName;
+
+		//模版引擎可以解析这个这个页面地址,就用模版引擎解析
+		TemplateAvailabilityProvider provider = this.templateAvailabilityProviders.getProvider(errorViewName,
+				this.applicationContext);
+		if (provider != null) {
+		    //如果模版引擎可用的情况下返回到 errorViewName,指定的视图地址
+			return new ModelAndView(errorViewName, model);
+		}
+		//模版不可用的情况下,就在静态资源下找errorViewName对应的页面 error/404.html
+		return resolveResource(errorViewName, model);
+	}
+```
 
 
 ### 定制Spring Boot的错误处理
 
 1.  如何定制错误的页面
-
+    
 
 2.  如何定制错误数据(其它终端访问应用返回的JSON数据)
