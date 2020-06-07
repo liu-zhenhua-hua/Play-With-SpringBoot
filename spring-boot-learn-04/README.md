@@ -445,14 +445,33 @@ public class LoginHandlerInterceptor implements HandlerInterceptor {
 ### Spring Boot默认的错误处理机制
 
 Spring Boot 错误处理的原理:**ErrorMvcAutoConfiguration** 错误处理的自动配置,给容器添加了如下组件: <br>
-    1. DefaultErrorAttributes
-    2. BasicErrorController
+    1. DefaultErrorAttributes <br>
+    2. BasicErrorController <br>
     ```java
     @Controller
     @RequestMapping("${server.error.path:${error.path:/error}}")
-    public class BasicErrorController extends AbstractErrorController
+    public class BasicErrorController extends AbstractErrorController {
+
+            @RequestMapping(produces = MediaType.TEXT_HTML_VALUE) //产生html类型的数据
+        	public ModelAndView errorHtml(HttpServletRequest request, HttpServletResponse response) {
+        		HttpStatus status = getStatus(request);
+        		Map<String, Object> model = Collections
+        				.unmodifiableMap(getErrorAttributes(request, isIncludeStackTrace(request, MediaType.TEXT_HTML)));
+        		response.setStatus(status.value());
+        		ModelAndView modelAndView = resolveErrorView(request, response, status, model);
+        		return (modelAndView != null) ? modelAndView : new ModelAndView("error", model);
+        	}
+
+        	@RequestMapping
+        	public ResponseEntity<Map<String, Object>> error(HttpServletRequest request) {
+        		Map<String, Object> body = getErrorAttributes(request, isIncludeStackTrace(request, MediaType.ALL));
+        		HttpStatus status = getStatus(request);
+        		return new ResponseEntity<>(body, status);
+        	}
+
+    }
     ```
-    3. ErrorPageCustomizer
+    3. ErrorPageCustomizer <br>
     ```java
     	/**
     	 * Path of the error controller.
@@ -461,7 +480,7 @@ Spring Boot 错误处理的原理:**ErrorMvcAutoConfiguration** 错误处理的�
     	private String path = "/error";
     	// 系统出现错误之后来到error请求进行处理(web.xml注册的错误页面规则)
     ```
-    4. DefaultErrorViewResolver
+    4. DefaultErrorViewResolver <br>
 
     错误处理步骤:
         1. 一旦系统出现4xx或者5xx之类的错误, ErrorPageCustomizer就会生效(定制错误的响应规则) 出现错误之后来到/error请求,就会被 <br>
