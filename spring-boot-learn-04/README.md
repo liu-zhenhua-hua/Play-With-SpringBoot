@@ -536,6 +536,6 @@ DefaultErrorViewResolver 是如何解析的
 ### 定制Spring Boot的错误处理
 
 1.  如何定制错误的页面
-    
+    有模版引擎的情况下, error/状态码 [将错误页面命名为 错误状态码.html, 放在模版引擎 templates/error/404.html 这样的方式]
 
 2.  如何定制错误数据(其它终端访问应用返回的JSON数据)
