@@ -402,3 +402,6 @@ public class MyLocaleResolver implements LocaleResolver{
 <p style="color:red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
 ```
 
+
+### 拦截器登录检查
+
