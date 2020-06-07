@@ -471,7 +471,7 @@ Spring Boot 错误处理的原理:**ErrorMvcAutoConfiguration** 错误处理的�
     @RequestMapping("${server.error.path:${error.path:/error}}")
     public class BasicErrorController extends AbstractErrorController {
 
-            @RequestMapping(produces = MediaType.TEXT_HTML_VALUE) //产生html类型的数据
+            @RequestMapping(produces = MediaType.TEXT_HTML_VALUE) //产生html类型的数据, 浏览器发送的请求由它来处理
         	public ModelAndView errorHtml(HttpServletRequest request, HttpServletResponse response) {
         		HttpStatus status = getStatus(request);
         		Map<String, Object> model = Collections
@@ -489,6 +489,20 @@ Spring Boot 错误处理的原理:**ErrorMvcAutoConfiguration** 错误处理的�
         	}
 
     }
+```
+
+响应页面
+```java
+	protected ModelAndView resolveErrorView(HttpServletRequest request, HttpServletResponse response, HttpStatus status,
+			Map<String, Object> model) {
+		for (ErrorViewResolver resolver : this.errorViewResolvers) {
+			ModelAndView modelAndView = resolver.resolveErrorView(request, status, model);
+			if (modelAndView != null) {
+				return modelAndView;
+			}
+		}
+		return null;
+	}
 ```
 
 
