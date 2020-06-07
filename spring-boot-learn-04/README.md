@@ -444,7 +444,11 @@ public class LoginHandlerInterceptor implements HandlerInterceptor {
 
 ### Spring Boot默认的错误处理机制
 
-Spring Boot 错误处理的原理:**ErrorMvcAutoConfiguration** 错误处理的自动配置
+Spring Boot 错误处理的原理:**ErrorMvcAutoConfiguration** 错误处理的自动配置,给容器添加了如下组件: <br>
+    1. DefaultErrorAttributes
+    2. BasicErrorController
+    3. ErrorPageCustomizer
+    4. DefaultErrorViewResolver
 
 
 
