@@ -464,6 +464,33 @@ Spring Boot 错误处理的原理:**ErrorMvcAutoConfiguration** 错误处理的�
 
 ```
 
+```java
+
+    //BasicErrorController
+    @Controller
+    @RequestMapping("${server.error.path:${error.path:/error}}")
+    public class BasicErrorController extends AbstractErrorController {
+
+            @RequestMapping(produces = MediaType.TEXT_HTML_VALUE) //产生html类型的数据
+        	public ModelAndView errorHtml(HttpServletRequest request, HttpServletResponse response) {
+        		HttpStatus status = getStatus(request);
+        		Map<String, Object> model = Collections
+        				.unmodifiableMap(getErrorAttributes(request, isIncludeStackTrace(request, MediaType.TEXT_HTML)));
+        		response.setStatus(status.value());
+        		ModelAndView modelAndView = resolveErrorView(request, response, status, model);
+        		return (modelAndView != null) ? modelAndView : new ModelAndView("error", model);
+        	}
+
+        	@RequestMapping
+        	public ResponseEntity<Map<String, Object>> error(HttpServletRequest request) {
+        		Map<String, Object> body = getErrorAttributes(request, isIncludeStackTrace(request, MediaType.ALL));
+        		HttpStatus status = getStatus(request);
+        		return new ResponseEntity<>(body, status);
+        	}
+
+    }
+```
+
 
 
 ### 定制Spring Boot的错误处理
