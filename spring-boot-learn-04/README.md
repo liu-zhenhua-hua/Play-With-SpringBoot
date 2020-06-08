@@ -537,6 +537,9 @@ DefaultErrorViewResolver 是如何解析的
 
 1.  如何定制错误的页面
     有模版引擎的情况下, error/状态码 [将错误页面命名为 错误状态码.html, 放在模版引擎 templates/error/404.html 这样的方式],发生此状态码的错误就会
-    来到对应的页面
+    来到对应的页面, 我们可以使用4xx和5xx作为错误页面的文件名来匹配这种类型的所有错误,精确优先, 优先寻找精确的状态码. 页面能获取的信息: timestamp 时间戳,
+    status: 状态码, error: 错误提示,exception: 异常对象, message: 异常消息, errors: JSR303数据校验的错误都在这里
+
+
 
 2.  如何定制错误数据(其它终端访问应用返回的JSON数据)
