@@ -553,4 +553,4 @@ DefaultErrorViewResolver 是如何解析的
 
 ### 配置嵌入式容器
 
-
+Spring Boot 默认使用的是嵌入式的Tomcat Servlet容器
