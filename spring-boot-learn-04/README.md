@@ -567,3 +567,6 @@ server.tomcat.xxx
 ```
 2. 编写一个EmbeddedServletContainerCustomizer : 嵌入式的Servlet容器的定制器
    Spring Boot中有很多xxxCustomizer 帮助我们定制配置
+
+
+3. 注册Servlet 三大组件Servlet, Filter, Listener
