@@ -555,8 +555,13 @@ DefaultErrorViewResolver 是如何解析的
 
 Spring Boot 默认使用的是嵌入式的Tomcat Servlet容器, 我们的问题? 如何定制和修改Servlet容器的相关配置, SpringBoot 能不能支持其它的Servlet容器
 
-如何定制和修改Servlet容器相关的配置: 修改server有关的配置
+如何定制和修改Servlet容器相关的配置: 修改server有关的配置(ServerProperties 类中)
 ```properties
 server.port=8099
 server.servlet.context-path=/jobs
+
+//通用的Servlet容器设置
+server.xxx
+//Tomcat的设置
+server.tomcat.xxx
 ```
