@@ -569,4 +569,4 @@ server.tomcat.xxx
    Spring Boot中有很多xxxCustomizer 帮助我们定制配置
 
 
-3. 注册Servlet 三大组件Servlet, Filter, Listener
+3. 注册Servlet 三大组件Servlet, Filter, Listener {ServletRegistrationBean, FilterRegistration, ServletListenerRegistration}
