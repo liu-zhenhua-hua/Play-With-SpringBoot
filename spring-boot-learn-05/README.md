@@ -31,4 +31,7 @@
 
 -p 主机端口映射到容器内部端口
 [root@localhost~]# docker run -d -p 1000:8080 tomcat
+
+查看容器日志
+[root@localhost~]# docker logs container-name/container-id
 ```
