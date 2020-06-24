@@ -51,6 +51,17 @@
             <groupId>mysql</groupId>
         	<artifactId>mysql-connector-java</artifactId>
         	<scope>runtime</scope>
+        	<version>5.1.37</version>
         </dependency>
 ```
 
+
+数据源配置
+```yml
+spring:
+  datasource:
+    username: foundation
+    password: Foundation@123zzyang
+    url: jdbc:mysql://123.57.73.229:3306/foundation
+    driver-class-name: com.mysql.jdbc.Driver
+```
