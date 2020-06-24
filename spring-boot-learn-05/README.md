@@ -13,4 +13,19 @@
 [root@loclahost~]# docker pull tomcat:tag
 查看镜像文件
 [root@localhost~]# docker images
+
+启动容器 -d 表示后台运行, --name 给容器起个名字
+[root@localhost~]# docker run --name mytomcat -d tomcat:latest
+
+查看运行中的容器
+[root@localhost~]# docker ps
+
+查看所有的容器
+[root@localhost~]# docker ps -a
+
+停止运行的容器
+[root@localhost~]# docker stop 4u6io76ps (Container ID)
+
+删除容器
+[root@localhost~]# docker rm container-id
 ```
