@@ -65,3 +65,5 @@ spring:
     url: jdbc:mysql://123.57.73.229:3306/foundation
     driver-class-name: com.mysql.jdbc.Driver
 ```
+
+数据源相关的配置类**(DataSourceProperties)**
