@@ -35,3 +35,4 @@
 查看容器日志
 [root@localhost~]# docker logs container-name/container-id
 ```
+更多的参考命令:(https://docs.docker.com/engine/reference/commandline/docker/)
