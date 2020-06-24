@@ -1,6 +1,0 @@
-spring:
-  datasource:
-    username: foundation
-    password: Foundation@123zzyang
-    url: jdbc:mysql://123.57.73.229:3306/jdbc
-    driver-class-name: com.mysql.jdbc.Driver
