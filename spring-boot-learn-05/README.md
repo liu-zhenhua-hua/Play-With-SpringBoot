@@ -28,4 +28,7 @@
 
 删除容器
 [root@localhost~]# docker rm container-id
+
+-p 主机端口映射到容器内部端口
+[root@localhost~]# docker run -d -p 1000:8080 tomcat
 ```
