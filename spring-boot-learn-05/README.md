@@ -36,3 +36,20 @@
 [root@localhost~]# docker logs container-name/container-id
 ```
 更多的参考命令:(https://docs.docker.com/engine/reference/commandline/docker/)
+注意: docker可以使用一个镜像, 启动多个容器, 容器与容器之间相互独立, 互不干扰
+
+
+
+### Spring Boot 与数据访问
+
+```xml
+        <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+        	<artifactId>mysql-connector-java</artifactId>
+        	<scope>runtime</scope>
+        </dependency>
+```
