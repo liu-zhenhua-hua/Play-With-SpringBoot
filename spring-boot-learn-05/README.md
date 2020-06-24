@@ -66,4 +66,24 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
 ```
 
-数据源相关的配置类**(DataSourceProperties)**
+数据源相关的配置类**(DataSourceProperties)**, 自动配置原理(org.springframework.boot.autoconfigure.jdbc)
+
+参考 DataSourceConfiguration 根据配置创建数据源 <br>
+
+Spring Boot 如何自定义数据源
+```java
+/**
+	 * Generic DataSource configuration.
+	 */
+	@Configuration
+	@ConditionalOnMissingBean(DataSource.class)
+	@ConditionalOnProperty(name = "spring.datasource.type")
+	static class Generic {
+
+		@Bean
+		public DataSource dataSource(DataSourceProperties properties) {
+			return properties.initializeDataSourceBuilder().build();
+		}
+
+	}
+```
