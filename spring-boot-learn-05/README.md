@@ -61,7 +61,7 @@
 spring:
   datasource:
     username: foundation
-    password: Foundation@123zzyang
+    password: Foundation@
     url: jdbc:mysql://123.57.73.229:3306/foundation
     driver-class-name: com.mysql.jdbc.Driver
 ```
