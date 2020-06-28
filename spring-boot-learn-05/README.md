@@ -63,6 +63,7 @@ spring:
     username: foundation
     password: Foundation@
     url: jdbc:mysql://123.57.73.229:3306/foundation
+    initialization-mode: always #Spring Boot2.0之后,需要指定这个参数, 这样Spring Boot才能自动执行SQL脚本文件
     driver-class-name: com.mysql.jdbc.Driver
 ```
 
